@@ -1,0 +1,1 @@
+Code to scrape Metacritic. Takes over 5 hours to run. This is to be respectful of the Metacritic servers. 
