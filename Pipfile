@@ -11,6 +11,7 @@ beautifulsoup4 = "*"
 requests = "*"
 lxml = "*"
 html5lib = "*"
+pandas-profiling = {extras = ["notebook"], version = "*"}
 
 [requires]
 python_version = "3.8"
