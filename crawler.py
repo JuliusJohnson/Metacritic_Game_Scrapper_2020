@@ -38,7 +38,7 @@ while index < data.shape[0]: #need to fix to be the length of data set
     except:
         data['developer'].loc[index] = "No Data"
         data['genre'].loc[index] = "No Data"
-        data['no_userreviews'].loc[index]
+        data['no_userreviews'].loc[index] = "No Data"
     index += 1
     time.sleep(3.25)    
 data.to_csv('metacritic_output.csv')
