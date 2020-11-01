@@ -23,13 +23,12 @@ def getGenreDev(link):
     ratings = numberratings[1].find_all('a') 
     return developer[0].text.strip(), genres, ratings[0].text.split(' ')[0]
 
-
 #print(getGenreDev(data['fullurl'][0]))
 data['developer'] = ""
 data['genre'] = ""
 data['no_userreviews'] = ""
 index = 0
-while index < data.shape[0]: #need to fix to be the length of data set
+while index < data.shape[0]: 
     print(index) #for troubleshooting
     try:
         data['developer'].loc[index] = (getGenreDev(data['fullurl'][index])[0]) #looks at the row represented by (loc[index]) and sets that equal to the first output of the "getGenreDev" function
@@ -42,4 +41,3 @@ while index < data.shape[0]: #need to fix to be the length of data set
     index += 1
     time.sleep(3.25)    
 data.to_csv('metacritic_output.csv')
-
